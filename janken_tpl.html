@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<script src="js/jquery-2.1.3.min.js"></script>
+<link rel="stylesheet" href="css/sample.css">
+<title>じゃんけん</title>
+</head>
+<body>
+
+<header>
+  <h1>じゃんけん</h1>
+</header>
+
+<main>
+  <ul id="button">
+    <li id="gu_btn">グー</li>
+    <li id="cho_btn">チョキ</li>
+    <li id="par_btn">パー</li>
+  </ul>
+  <div>コンピュータの出した手は？「<span id="pc_hands">なに？</span>」</div>
+  <div id="judgement">勝ち</div>
+</main>
+
+<footer></footer>
+<script>
+
+$("#gu_btn").on("click", function(){
+const n = Math.ceil(Math.random()*3);
+if (n == 1){
+  pc_hands.innerHTML = "グー"; judgement.innerHTML = "あいこ";
+}else if (n == 2){
+  pc_hands.innerHTML = "チョキ"; judgement.innerHTML = "勝ち";
+}else if (n == 3){
+  pc_hands.innerHTML = "パー"; judgement.innerHTML = "負け";
+}
+})
+
+$("#cho_btn").on("click", function(){
+const n = Math.ceil(Math.random()*3);
+if (n == 1){
+  pc_hands.innerHTML = "グー"; judgement.innerHTML = "負け";
+}else if (n == 2){
+  pc_hands.innerHTML = "チョキ"; judgement.innerHTML = "あいこ";
+}else if (n == 3){
+  pc_hands.innerHTML = "パー"; judgement.innerHTML = "勝ち";
+}
+})
+
+$("#par_btn").on("click", function(){
+const n = Math.ceil(Math.random()*3);
+if (n == 1){
+  pc_hands.innerHTML = "グー"; judgement.innerHTML = "勝ち";
+}else if (n == 2){
+  pc_hands.innerHTML = "チョキ"; judgement.innerHTML = "負け";
+}else if (n == 3){
+  pc_hands.innerHTML = "パー"; judgement.innerHTML = "あいこ";
+}
+})
+
+</script>
+</body>
+</html>
